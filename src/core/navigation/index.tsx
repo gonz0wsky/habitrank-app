@@ -23,6 +23,7 @@ import { HomeView } from "@features/ranking/HomeView/HomeView";
 import { ProfileView } from "@features/profile/ui/ProfileView/ProfileView";
 import { LoginView } from "@features/auth/ui/LoginView/LoginView";
 import { DetailView } from "@features/ranking/DetailView/DetailView";
+import { SignUpView } from "@features/auth/ui/SignUp/SignUpView";
 
 const TABS_SCREEN_OPTIONS: BottomTabNavigationOptions = {
   headerShown: false,
@@ -31,7 +32,7 @@ const TABS_SCREEN_OPTIONS: BottomTabNavigationOptions = {
 
 const MAIN_SCREEN_OPTIONS: NativeStackNavigationOptions = {
   headerShown: false,
-  animation: "ios_from_left",
+  animation: "ios_from_right",
 } as const;
 
 const MODAL_SCREEN_OPTIONS: NativeStackNavigationOptions = {
@@ -63,6 +64,7 @@ const TabNavigator = () => {
 const MainNavigatorPublicScreens = () => (
   <Main.Group>
     <Main.Screen name="Login" component={LoginView} />
+    <Main.Screen name="SignUp" component={SignUpView} />
   </Main.Group>
 );
 

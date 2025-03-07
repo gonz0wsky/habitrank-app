@@ -38,5 +38,20 @@ export const theme = {
         backgroundColor: `${palette.alt}30`,
       },
     },
+    circular_button: {
+      background: {
+        primary: { backgroundColor: palette.primary },
+        secondary: { backgroundColor: palette.dark },
+      },
+      icon: {
+        primary: { color: palette.light },
+        secondary: { color: palette.light },
+      },
+    },
+    header: {
+      background: {
+        backgroundColor: palette.primary,
+      },
+    },
   },
 };

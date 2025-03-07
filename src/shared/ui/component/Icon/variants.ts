@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import Plus from "./icons/Plus";
+import LeftArrow from "./icons/LeftArrow";
 
 import type { IconProps } from "./types";
 
@@ -10,4 +11,5 @@ const createSvgIcons = <T extends { [name: string]: FC<IconProps> }>(
 
 export const icons = createSvgIcons({
   plus: Plus,
+  left_arrow: LeftArrow,
 });
