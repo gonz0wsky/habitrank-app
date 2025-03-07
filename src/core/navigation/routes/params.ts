@@ -4,8 +4,8 @@ import type { FC } from "react";
 
 export type MainNavigatorParamList = {
   Detail: undefined;
+  Login: undefined;
   Tabs: undefined;
-  Welcome: undefined;
 };
 
 export type TabNavigatorParamList = {

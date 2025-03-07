@@ -21,7 +21,7 @@ import { BottomBar } from "./ui/BottomBar";
 
 import { HomeView } from "@features/ranking/HomeView/HomeView";
 import { ProfileView } from "@features/profile/ui/ProfileView/ProfileView";
-import { WelcomeView } from "@features/auth/ui/WelcomeView/WelcomeView";
+import { LoginView } from "@features/auth/ui/LoginView/LoginView";
 import { DetailView } from "@features/ranking/DetailView/DetailView";
 
 const TABS_SCREEN_OPTIONS: BottomTabNavigationOptions = {
@@ -62,7 +62,7 @@ const TabNavigator = () => {
 
 const MainNavigatorPublicScreens = () => (
   <Main.Group>
-    <Main.Screen name="Welcome" component={WelcomeView} />
+    <Main.Screen name="Login" component={LoginView} />
   </Main.Group>
 );
 
@@ -88,7 +88,7 @@ const Navigator = () => {
   return (
     <NavigationContainer linking={linking}>
       <Main.Navigator
-        initialRouteName={isLogged ? "Tabs" : "Welcome"}
+        initialRouteName={isLogged ? "Tabs" : "Login"}
         screenOptions={MAIN_SCREEN_OPTIONS}
       >
         {isLogged

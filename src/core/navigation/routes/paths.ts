@@ -1,7 +1,7 @@
 import { ScreenName } from "./params";
 
 export const paths: Record<ScreenName, string> = {
-  Welcome: "/",
+  Login: "/",
   Detail: "/detail",
   Home: "/home",
   Profile: "/profile",

@@ -1,9 +1,12 @@
+import { theme } from "./themes/variants/light";
+
 export const color = {
-  theme_light_black: "#0B0B0B",
-  theme_light_blue: "#264BEB",
-  theme_light_grey: "#F1F1F0",
-  theme_light_pastel_blue: "#8DA0F0",
-  theme_light_white: "#FFFFFF",
+  theme_light_light: "#eff2f5",
+  theme_light_dark: "#272b38",
+  theme_light_primary: "#8081c0",
+  theme_light_secondary: "#9bbbdd",
+  theme_light_alt: "#9ea4b6",
+  theme_light_error: "#ff4d4f",
 } as const;
 
 export const space = {

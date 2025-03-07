@@ -279,16 +279,16 @@ export const atoms = {
    * Border
    */
   border: {
-    borderWidth: 1,
+    borderWidth: 1.5,
   },
   border_t: {
-    borderTopWidth: 1,
+    borderTopWidth: 1.5,
   },
   border_t_sm: {
     borderTopWidth: 1.5,
   },
   border_b: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 1.5,
   },
 
   /*
