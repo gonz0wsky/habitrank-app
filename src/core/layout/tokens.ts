@@ -1,5 +1,3 @@
-import { theme } from "./themes/variants/light";
-
 export const color = {
   theme_light_light: "#eff2f5",
   theme_light_dark: "#272b38",

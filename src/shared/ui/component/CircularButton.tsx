@@ -24,6 +24,7 @@ const CircularButton: FC<Props> = ({
   return (
     <View style={[style, a.rounded_md, a.overflow_hidden]}>
       <BorderlessButton
+        foreground
         style={[
           { height: size, width: size },
           t.atoms.circular_button.background[variant],

@@ -86,7 +86,7 @@ const linking: LinkingOptions<AllNavigatorParamList> = {
 } as const;
 
 const Navigator = () => {
-  const isLogged = false;
+  const isLogged = true;
   return (
     <NavigationContainer linking={linking}>
       <Main.Navigator

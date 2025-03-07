@@ -53,5 +53,14 @@ export const theme = {
         backgroundColor: palette.primary,
       },
     },
+    icon: {
+      primary: { color: palette.dark },
+      primary_disabled: { color: `${palette.dark}60` },
+    },
+    bottom_bar: {
+      background: {
+        backgroundColor: palette.primary,
+      },
+    },
   },
 };
