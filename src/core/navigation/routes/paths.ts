@@ -6,4 +6,5 @@ export const paths: Record<ScreenName, string> = {
   Home: "/home",
   Profile: "/profile",
   Tabs: "/tabs",
+  SignUp: "/signup",
 } as const;
