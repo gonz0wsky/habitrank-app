@@ -1,21 +1,22 @@
 import { atoms as a, useTheme } from "@core/layout";
 import { ScreenComponent } from "@core/navigation/routes/params";
-import { SafeAreaView, Text } from "react-native";
+import { View } from "react-native";
+import { useHomeViewModel } from "./useHomeViewModel";
+import Header from "@shared/ui/component/Header";
+import { useLingui } from "@lingui/react";
+import { HabitCardList } from "./components/HabitCardList";
 
 const HomeView: ScreenComponent<"Home"> = () => {
   const t = useTheme();
+  const { i18n } = useLingui();
+
+  const { joinedHabitsList } = useHomeViewModel();
 
   return (
-    <SafeAreaView
-      style={[
-        a.flex_1,
-        t.atoms.background.primary,
-        a.justify_center,
-        a.align_center,
-      ]}
-    >
-      <Text>Home</Text>
-    </SafeAreaView>
+    <View style={[a.flex_1, t.atoms.background.primary]}>
+      <Header transparent title={i18n.t("Habits")} />
+      <HabitCardList habits={joinedHabitsList} />
+    </View>
   );
 };
 
