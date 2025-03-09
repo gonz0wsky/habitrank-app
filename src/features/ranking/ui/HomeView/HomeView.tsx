@@ -10,12 +10,15 @@ const HomeView: ScreenComponent<"Home"> = () => {
   const t = useTheme();
   const { i18n } = useLingui();
 
-  const { joinedHabitsList } = useHomeViewModel();
+  const { joinedHabitsList, handleOnPressCard } = useHomeViewModel();
 
   return (
     <View style={[a.flex_1, t.atoms.background.primary]}>
       <Header transparent title={i18n.t("Habits")} />
-      <HabitCardList habits={joinedHabitsList} />
+      <HabitCardList
+        habits={joinedHabitsList}
+        onPressCard={handleOnPressCard}
+      />
     </View>
   );
 };

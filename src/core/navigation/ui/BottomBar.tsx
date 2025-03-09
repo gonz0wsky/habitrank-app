@@ -56,6 +56,10 @@ export const BottomBar: FC<BottomTabBarProps> = ({ navigation, state }) => {
     ]
   );
 
+  const handleOnPressAdd = () => {
+    navigation.navigate("CreateHabit");
+  };
+
   return (
     <View
       style={[
@@ -67,7 +71,12 @@ export const BottomBar: FC<BottomTabBarProps> = ({ navigation, state }) => {
       ]}
     >
       {Tab(state.routes[0], 0)}
-      <CircularButton icon="plus" variant="secondary" size={48} />
+      <CircularButton
+        icon="plus"
+        variant="secondary"
+        size={48}
+        onPress={handleOnPressAdd}
+      />
       {Tab(state.routes[1], 1)}
     </View>
   );

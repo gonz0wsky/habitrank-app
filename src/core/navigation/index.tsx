@@ -22,8 +22,9 @@ import { BottomBar } from "./ui/BottomBar";
 import { HomeView } from "@features/ranking/ui/HomeView/HomeView";
 import { ProfileView } from "@features/profile/ui/ProfileView/ProfileView";
 import { LoginView } from "@features/auth/ui/LoginView/LoginView";
-import { DetailView } from "@features/ranking/ui/DetailView/DetailView";
+import { HabitDetailView } from "@features/ranking/ui/HabitDetailView/HabitDetailView";
 import { SignUpView } from "@features/auth/ui/SignUp/SignUpView";
+import { CreateHabitView } from "@features/ranking/ui/CreateHabitView/CreateHabitView";
 
 const TABS_SCREEN_OPTIONS: BottomTabNavigationOptions = {
   headerShown: false,
@@ -71,9 +72,10 @@ const MainNavigatorPublicScreens = () => (
 const MainNavigatorPrivateScreens = () => (
   <Main.Group>
     <Main.Screen name="Tabs" component={TabNavigator} />
+    <Main.Screen name="HabitDetail" component={HabitDetailView} />
 
     <Main.Group screenOptions={MODAL_SCREEN_OPTIONS}>
-      <Main.Screen name="Detail" component={DetailView} />
+      <Main.Screen name="CreateHabit" component={CreateHabitView} />
     </Main.Group>
   </Main.Group>
 );

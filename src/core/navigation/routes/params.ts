@@ -3,7 +3,8 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import type { FC } from "react";
 
 export type MainNavigatorParamList = {
-  Detail: undefined;
+  CreateHabit: undefined;
+  HabitDetail: { id: string };
   Login: undefined;
   SignUp: undefined;
   Tabs: undefined;
