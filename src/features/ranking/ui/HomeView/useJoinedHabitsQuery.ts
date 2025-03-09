@@ -1,5 +1,5 @@
 import { getJoinedHabits } from "@features/ranking/application/getJoinedHabits";
-import { habitsRepositoryMockImpl } from "@features/ranking/data/HabitsRepositoryMockImpl";
+import { habitsRepositoryMockImpl } from "@features/ranking/data/habitsRepositoryMockImpl";
 import { Habit } from "@features/ranking/domain/models/Habit";
 import { useInfiniteQuery } from "@tanstack/react-query";
 

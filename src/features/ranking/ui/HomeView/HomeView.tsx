@@ -4,7 +4,7 @@ import { View } from "react-native";
 import { useHomeViewModel } from "./useHomeViewModel";
 import Header from "@shared/ui/component/Header";
 import { useLingui } from "@lingui/react";
-import { HabitCardList } from "./components/HabitCardList";
+import HabitCardList from "./components/HabitCardList";
 
 const HomeView: ScreenComponent<"Home"> = () => {
   const t = useTheme();

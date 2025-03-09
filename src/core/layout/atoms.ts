@@ -274,6 +274,11 @@ export const atoms = {
     fontFamily: tokens.font.bold,
     fontSize: tokens.fontSize.lg,
   },
+  font_caption: {
+    fontWeight: tokens.fontWeight.normal,
+    fontFamily: tokens.font.regular,
+    fontSize: tokens.fontSize.xs,
+  },
 
   /*
    * Border

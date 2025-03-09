@@ -62,5 +62,21 @@ export const theme = {
         backgroundColor: palette.primary,
       },
     },
+    habit_card: {
+      text: {
+        color: palette.dark,
+      },
+      background: {
+        backgroundColor: palette.secondary,
+      },
+      bottom: {
+        background: {
+          backgroundColor: palette.dark,
+        },
+        text: {
+          color: palette.light,
+        },
+      },
+    },
   },
 };

@@ -42,7 +42,7 @@ const CHECK_COUNT_TWO: HabitCheckCount = {
   id: "4",
   count: 20,
   type: "count",
-  owner: PARTICIPANT_ONE,
+  owner: PARTICIPANT_TWO,
 };
 
 const TASK_ONE: Task = {
@@ -69,7 +69,7 @@ const SINGLE_HABIT: SingleHabit = {
 const MULTIPLE_HABIT: Habit = {
   type: "multi",
   id: "2",
-  name: "Time that I will start working on HabitRank",
+  name: "Time that I will start working on HabitRank and other things that I will do in the future",
   description: "Description 2",
   createdAt: new Date().toISOString(),
   checks: [CHECK_COUNT_ONE, CHECK_COUNT_TWO],
