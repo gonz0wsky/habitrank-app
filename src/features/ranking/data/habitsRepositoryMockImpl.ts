@@ -1,5 +1,8 @@
 import { Habit, SingleHabit } from "../domain/models/Habit";
-import { HabitCheck } from "../domain/models/HabitCheck";
+import {
+  HabitCheckCount,
+  HabitCheckTimestamp,
+} from "../domain/models/HabitCheck";
 import { HabitParticipant } from "../domain/models/HabitParticipant";
 import { Task } from "../domain/models/Task";
 import { HabitsRepository } from "../domain/repository/HabitsRepository";
@@ -14,16 +17,32 @@ const PARTICIPANT_TWO: HabitParticipant = {
   name: "gonz0wsky",
 };
 
-const CHECK_ONE: HabitCheck = {
+const CHECK_MOMENT_ONE: HabitCheckTimestamp = {
   id: "1",
   date: new Date().toISOString(),
   owner: PARTICIPANT_ONE,
+  type: "timestamp",
 };
 
-const CHECK_TWO: HabitCheck = {
+const CHECK_MOMENT_TWO: HabitCheckTimestamp = {
   id: "2",
   date: new Date().toISOString(),
-  owner: PARTICIPANT_TWO,
+  type: "timestamp",
+  owner: PARTICIPANT_ONE,
+};
+
+const CHECK_COUNT_ONE: HabitCheckCount = {
+  id: "3",
+  count: 10,
+  type: "count",
+  owner: PARTICIPANT_ONE,
+};
+
+const CHECK_COUNT_TWO: HabitCheckCount = {
+  id: "4",
+  count: 20,
+  type: "count",
+  owner: PARTICIPANT_ONE,
 };
 
 const TASK_ONE: Task = {
@@ -42,7 +61,7 @@ const SINGLE_HABIT: SingleHabit = {
   name: "Time that I will start working on HabitRank",
   description: "Description 1",
   createdAt: new Date().toISOString(),
-  checks: [CHECK_ONE, CHECK_TWO],
+  checks: [CHECK_MOMENT_ONE, CHECK_MOMENT_TWO],
   owner: PARTICIPANT_ONE,
   participants: [PARTICIPANT_ONE, PARTICIPANT_TWO],
 };
@@ -53,7 +72,7 @@ const MULTIPLE_HABIT: Habit = {
   name: "Time that I will start working on HabitRank",
   description: "Description 2",
   createdAt: new Date().toISOString(),
-  checks: [CHECK_ONE, CHECK_TWO],
+  checks: [CHECK_COUNT_ONE, CHECK_COUNT_TWO],
   owner: PARTICIPANT_ONE,
   participants: [PARTICIPANT_ONE, PARTICIPANT_TWO],
   tasks: [TASK_ONE, TASK_TWO],

@@ -1,9 +1,20 @@
 import type { HabitParticipant } from "./HabitParticipant";
 
-type HabitCheck = {
+type SharedHabitCheckProperties = {
   id: string;
-  date: string;
   owner: HabitParticipant;
 };
 
-export { HabitCheck };
+type HabitCheckTimestamp = {
+  type: "timestamp";
+  date: string;
+} & SharedHabitCheckProperties;
+
+type HabitCheckCount = {
+  type: "count";
+  count: number;
+} & SharedHabitCheckProperties;
+
+type HabitCheck = HabitCheckTimestamp | HabitCheckCount;
+
+export { HabitCheck, HabitCheckTimestamp, HabitCheckCount };

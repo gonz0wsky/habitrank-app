@@ -1,4 +1,4 @@
-import type { HabitCheck } from "./HabitCheck";
+import type { HabitCheckCount, HabitCheckTimestamp } from "./HabitCheck";
 import type { HabitParticipant } from "./HabitParticipant";
 import type { Task } from "./Task";
 
@@ -9,16 +9,17 @@ type SharedHabitProperties = {
   owner: HabitParticipant;
   createdAt: string;
   participants: HabitParticipant[];
-  checks: HabitCheck[];
 };
 
 type SingleHabit = SharedHabitProperties & {
   type: "single";
+  checks: HabitCheckTimestamp[];
 };
 
 type MultiHabit = SharedHabitProperties & {
   type: "multi";
   tasks: Task[];
+  checks: HabitCheckCount[];
 };
 
 type Habit = SingleHabit | MultiHabit;
